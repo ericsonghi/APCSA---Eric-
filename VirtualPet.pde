@@ -5,8 +5,8 @@ void setup(){
 }
 
 void draw(){
-  for(int y = 60; y < 500; y += (int)(Math.random()*100) + 50)
-    for(int x = 60; x < 500; x += (int)(Math.random()*100)+50)
+  for(int y = 60; y < 500; y += (int)(Math.random()*100) + 25)
+    for(int x = 60; x < 500; x += (int)(Math.random()*100)+ 25)
       iceCream(x, y);
 }
 
