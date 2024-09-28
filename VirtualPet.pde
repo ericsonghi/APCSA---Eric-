@@ -8,13 +8,12 @@ boolean lightningActive = false;
 void setup(){
   size(500, 500);
   background(44, 46, 53); 
-  frameRate(65); 
+  frameRate(70); 
   currentX = startX;
   currentY = startY;
 }
 
 void draw(){
-
 
   cloud();
 
@@ -56,7 +55,7 @@ void lightningBolt(){
   }
 }
 
-void mousePressed()
+void mousePressed(){
 {
     if (!lightningActive) {
     lightningActive = true;
@@ -64,4 +63,5 @@ void mousePressed()
     currentY = startY;
     background(44, 46, 53);
   }
+}
 }
