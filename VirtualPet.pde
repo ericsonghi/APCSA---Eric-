@@ -14,12 +14,6 @@ void setup(){
 }
 
 void draw(){
-  if (mousePressed && !lightningActive) {
-    lightningActive = true;
-    currentX = startX;
-    currentY = startY;
-    background(44, 46, 53);
-  }
   
   cloud();
 
@@ -58,6 +52,15 @@ void lightningBolt(){
   if (currentY > endY) {
     lightningActive = false;
     delay(400);
+    background(44, 46, 53);
+  }
+}
+
+void mousePressed(){
+  if (mousePressed && !lightningActive) {
+    lightningActive = true;
+    currentX = startX;
+    currentY = startY;
     background(44, 46, 53);
   }
 }
