@@ -14,7 +14,8 @@ void setup(){
 }
 
 void draw(){
-  
+
+
   cloud();
 
   if (lightningActive) {
@@ -33,22 +34,21 @@ void cloud(){
 void lightningBolt(){
   strokeWeight(8);
   stroke(232, 232, 81);
-  
 
   int newX = currentX + (int)(Math.random()*40 - 20);
   int newY = currentY + (int)(Math.random()*20 + 10);
-  
+
   line(currentX, currentY, newX, newY);
-  
+
   if (Math.random() < 0.4) {
     int branchX = newX + (int)(Math.random()*40 - 20); 
     int branchY = newY + (int)(Math.random()*30 + 10);
     line(newX, newY, branchX, branchY);
   }
-  
+
   currentX = newX;
   currentY = newY;
-  
+
   if (currentY > endY) {
     lightningActive = false;
     delay(400);
@@ -56,8 +56,9 @@ void lightningBolt(){
   }
 }
 
-void mousePressed(){
-  if (mousePressed && !lightningActive) {
+void mousePressed()
+{
+    if (!lightningActive) {
     lightningActive = true;
     currentX = startX;
     currentY = startY;
